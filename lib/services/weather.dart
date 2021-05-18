@@ -15,9 +15,10 @@ class Weather {
         Uri.https('www.googleapis.com', '/books/v1/volumes', {'q': '{http}'});
     http.Response response = await http.get(url);
     if (response.statusCode == 200) {
-      String data = response.body;
-      location.longitude = jsonDecode(data)['coord']['lon'];
-      location.latitude = jsonDecode(data)['coord']['lat'];
+      String json = response.body;
+      dynamic data = jsonDecode(json);
+      int temperature = data['coord']['lon'];
+      String condition = data['coord']['lat'];
     } else {
       print(response.statusCode);
     }
