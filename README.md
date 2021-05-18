@@ -17,3 +17,4 @@ Weather app inspired by the beautiful designs made by [Olia Gozha](https://dribb
 - Learn about the lifecycle of Stateful Widgets and how to override them.
 - How to use the Geolocator package to get live location data for both iOS and Android.
 - How to use the TextField Widget to take user input.
+- How to use env files.

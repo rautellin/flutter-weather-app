@@ -16,6 +16,8 @@ dependencies:
   flutter_launcher_icons: ^0.9.0
   font_awesome_flutter: ^9.0.0
   geolocator: ^7.0.3
+  flutter_dotenv: ^3.1.0
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:
@@ -33,3 +35,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - .env
