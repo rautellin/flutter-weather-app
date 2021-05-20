@@ -28,12 +28,7 @@ class _CityScreenState extends State<CityScreen> {
                 alignment: Alignment.topLeft,
                 child: TextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => LocationScreen(),
-                      ),
-                    );
+                    Navigator.pop(context);
                   },
                   child: Icon(
                     Icons.arrow_back_ios,
