@@ -4,12 +4,11 @@ import 'dart:convert';
 
 class NetworkHelper {
   String url;
-  String path;
 
-  NetworkHelper({@required this.url, @required this.path});
+  NetworkHelper({@required this.url});
 
   Future getData() async {
-    Uri uri = Uri.https(url, path);
+    Uri uri = Uri.parse(url);
     http.Response response = await http.get(uri);
 
     if (response.statusCode == 200) {
