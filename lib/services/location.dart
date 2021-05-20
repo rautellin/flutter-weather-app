@@ -4,17 +4,16 @@ class Location {
   double latitude;
   double longitude;
 
+  Location({this.latitude, this.longitude});
+
   Future getCurrentLocation() async {
     try {
       Position position = await Geolocator.getCurrentPosition(
           desiredAccuracy: LocationAccuracy.low);
       latitude = position.latitude;
       longitude = position.longitude;
-    } catch (e) {
-      latitude = 0;
-      longitude = 0;
+    } catch (error) {
+      print(error);
     }
   }
-
-  Location({this.latitude, this.longitude});
 }
